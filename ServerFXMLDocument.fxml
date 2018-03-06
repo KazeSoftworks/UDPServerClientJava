@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ServerFXMLController">
+   <children>
+      <ListView fx:id="UserListTable" layoutX="58.0" layoutY="20.0" onMouseClicked="#SelectedUserList" prefHeight="450.0" prefWidth="290.0" />
+      <TextField fx:id="FilterField" layoutX="462.0" layoutY="481.0" prefHeight="25.0" prefWidth="170.0" />
+      <Button layoutX="657.0" layoutY="481.0" mnemonicParsing="false" onAction="#FilterMessageListSender" text="Filtrar por Remitente" />
+      <Button layoutX="657.0" layoutY="514.0" mnemonicParsing="false" onAction="#FilterMessageListReceiver" prefHeight="25.0" prefWidth="126.0" text="Filtrar por Receptor" />
+      <TableView fx:id="table" layoutX="462.0" layoutY="20.0" onMouseClicked="#SelectedMessageList" prefHeight="450.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="ColumnRemitente" prefWidth="100.0" text="Remitente" />
+            <TableColumn fx:id="ColumnReceptor" prefWidth="100.0" text="Receptor" />
+          <TableColumn fx:id="ColumnMensaje" prefWidth="317.0" text="Mensaje" />
+            <TableColumn fx:id="ColumnFecha" prefWidth="130.0" sortType="DESCENDING" text="Fecha" />
+            <TableColumn fx:id="ColumnConfirmation" minWidth="0.0" prefWidth="52.0" text="✓" />
+        </columns>
+      </TableView>
+      <TextField fx:id="userField" layoutX="57.0" layoutY="481.0" prefHeight="25.0" prefWidth="186.0" />
+      <Button layoutX="250.0" layoutY="481.0" mnemonicParsing="false" onAction="#AddUser" prefHeight="25.0" prefWidth="98.0" text="Añadir Usuario" />
+      <Button layoutX="250.0" layoutY="514.0" mnemonicParsing="false" onAction="#RemoveUser" prefHeight="25.0" prefWidth="98.0" text="Borrar Usuario" />
+      <Button layoutX="1064.0" layoutY="481.0" mnemonicParsing="false" onAction="#DeleteMessage" prefHeight="25.0" prefWidth="98.0" text="Borrar" />
+      <Button layoutX="178.0" layoutY="546.0" mnemonicParsing="false" onAction="#DeleteMessageFromUser" prefHeight="25.0" prefWidth="170.0" text="Borrar mensajes de Usuario" />
+      <Button layoutX="98.0" layoutY="611.0" mnemonicParsing="false" onAction="#DeleteMessageFromDeletedUser" prefHeight="25.0" prefWidth="250.0" text="Borrar mensajes de usuarios Eliminados" />
+      <Button layoutX="57.0" layoutY="514.0" mnemonicParsing="false" onAction="#FilterUser" prefHeight="25.0" prefWidth="98.0" text="Filtrar Usuario" />
+   </children>
+</AnchorPane>

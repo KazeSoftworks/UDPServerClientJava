@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientFXMLController">
+   <children>
+      <Label layoutX="56.0" layoutY="29.0" text="User:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userField" layoutX="124.0" layoutY="22.0" prefHeight="44.0" prefWidth="358.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Button fx:id="loginButton" layoutX="497.0" layoutY="26.0" mnemonicParsing="false" onAction="#LoginAction" prefHeight="37.0" prefWidth="79.0" text="Login">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="SendToField" disable="true" layoutX="124.0" layoutY="120.0" prefHeight="25.0" prefWidth="435.0" promptText="User1, User2, User3..." />
+      <Label layoutX="56.0" layoutY="120.0" text="Para:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="124.0" layoutY="145.0" text="Example: User1, User2, User 3...">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="MessageField" disable="true" layoutX="124.0" layoutY="190.0" prefHeight="247.0" prefWidth="435.0" promptText="Escriba su mensaje aqui" />
+      <Label layoutX="56.0" layoutY="190.0" text="Mensaje:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="SendButton" disable="true" layoutX="470.0" layoutY="461.0" mnemonicParsing="false" onAction="#SendAndConfirmMessagePacket" prefHeight="25.0" prefWidth="89.0" text="Send" />
+      <TableView fx:id="table" layoutX="579.0" layoutY="26.0" onMouseClicked="#SelectedMessageList" prefHeight="450.0" prefWidth="603.0">
+         <columns>
+            <TableColumn fx:id="ColumnReceptor" prefWidth="75.0" text="Receptor" />
+            <TableColumn fx:id="ColumnRemitente" prefWidth="75.0" text="Remitente" />
+            <TableColumn fx:id="ColumnMensaje" prefWidth="356.0" text="Mensaje" />
+            <TableColumn fx:id="ColumnFecha" prefWidth="96.0" text="Fecha" />
+         </columns>
+      </TableView>
+      <Button fx:id="unloginButton" disable="true" layoutX="497.0" layoutY="66.0" mnemonicParsing="false" onAction="#TerminateClient" prefHeight="37.0" prefWidth="79.0" text="Unlogin" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="MessageTextArea" editable="false" layoutX="579.0" layoutY="527.0" prefHeight="200.0" prefWidth="609.0" wrapText="true" />
+      <Label fx:id="senderAndReceiverLabel" layoutX="579.0" layoutY="492.0" prefHeight="17.0" prefWidth="230.0" wrapText="true" />
+      <Label fx:id="DateLabel" layoutX="952.0" layoutY="492.0" prefHeight="17.0" prefWidth="230.0" textAlignment="RIGHT" wrapText="true" />
+   </children>
+</AnchorPane>
